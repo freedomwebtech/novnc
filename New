@@ -1,0 +1,18 @@
+
+
+
+sudo apt install vnc4server
+
+vncpasswd
+
+vncserver :1
+
+
+sudo apt install websockify novnc
+
+
+sudo openssl req -x509 -nodes -newkey rsa:2048 -keyout novnc.pem -out novnc.pem -days 365
+
+
+websockify -D --web=/usr/share/novnc/ --cert=/etc/ssl/novnc.pem 9090 localhost:5901
+
