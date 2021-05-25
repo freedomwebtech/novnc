@@ -7,6 +7,7 @@ vncpasswd
 
 vncserver :1
 
+vncserver -kill :1
 
 sudo apt install websockify novnc
 
